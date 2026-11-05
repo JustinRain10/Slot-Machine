@@ -1,0 +1,77 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slot Machine</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <div class="bg-collage" id="bgCollage" aria-hidden="true"></div>
+    <div class="bg-overlay" aria-hidden="true"></div>
+
+    <div class="arcade">
+
+      <header class="arcade-header">
+        <h1 class="logo">Slot Machine</h1>
+        <p class="tagline">All row pays!</p>
+      </header>
+
+      <div class="dashboard">
+        <div class="stat">
+          <span class="stat-label">Money</span>
+          <span class="stat-value" id="balance">$100</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Bet</span>
+          <span class="stat-value" id="betDisplay">$5</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Last Win</span>
+          <span class="stat-value" id="lastWin">$0</span>
+        </div>
+      </div>
+
+      <div class="machine">
+        <div class="reel-frame">
+          <div class="reel" id="reel0">
+            <div class="slot slot-top"></div>
+            <div class="slot slot-mid"></div>
+            <div class="slot slot-bottom"></div>
+          </div>
+          <div class="reel" id="reel1">
+            <div class="slot slot-top"></div>
+            <div class="slot slot-mid"></div>
+            <div class="slot slot-bottom"></div>
+          </div>
+          <div class="reel" id="reel2">
+            <div class="slot slot-top"></div>
+            <div class="slot slot-mid"></div>
+            <div class="slot slot-bottom"></div>
+          </div>
+        </div>
+        <p class="payline-note">▲ middle row pays ▲</p>
+      </div>
+
+
+      <p class="message" id="message">Place a bet to win some money.</p>
+
+
+      <div class="controls">
+        <button class="btn btn-secondary" id="betDown">− Bet</button>
+        <button class="btn btn-secondary" id="betUp">+ Bet</button>
+        <button class="btn btn-primary" id="spinBtn">▶ Spin</button>
+        <button class="btn btn-auto" id="autoSpinBtn">↻ Auto Spin</button>
+      </div>
+
+      <div class="paytable" id="paytable">
+        <h2>Winning Combinations</h2>
+        <ul id="paytableList"></ul>
+      </div>
+
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+  </html>
